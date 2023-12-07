@@ -46,24 +46,39 @@ input {
     font-family: inherit;
 }
 
-fieldset {
+/* fieldset {
     padding: 0;
     margin: 0;
     border: none;
-}
+} */
 
 .container {
-  max-width: 1158px;
-  padding-left: 15px;
-  padding-right: 15px; 
-  margin-left: auto;
-  margin-right: auto;
+    max-width: 320px;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 768px;
+    }
+}
+
+@media screen and (min-width: 1158px) {
+    .container {
+        max-width: 1158px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 }
 
 .section {
-    padding-top: 120px;
-    padding-bottom: 120px;
+    padding-top: 96px;
+    padding-bottom: 96px;
 }
+/* 
 
 .logo {
     font-family: "Raleway", sans-serif;
@@ -73,7 +88,7 @@ fieldset {
     line-height: 1.17;
     letter-spacing: 0.03em;
     color: #4d5ae5;
-}
+} */
 
 .visually-hidden {
     position: absolute;
@@ -92,7 +107,7 @@ fieldset {
 
 /* ============== HEADER STYLES ==============*/
 
- .page-header {
+ /* .page-header {
     border-bottom: 1px solid #E7E9FC;
     box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08), 
     0px 1px 1px 0px rgba(46, 47, 66, 0.16), 
@@ -164,13 +179,13 @@ fieldset {
     height: 4px;
     border-radius: 2px;
     background-color: #404BBF;
-}
+} */
 
 /* ============== /HEADER STYLES ============== */
 
 /* ================ ORDER STYLES ===================== */
 
-.order-section {
+/* .order-section {
     padding: 188px 0;
     background-image: linear-gradient(
     rgba(46, 47, 66, 0.7),
@@ -228,13 +243,63 @@ fieldset {
     font-weight: 500;
     letter-spacing: 0.02em;
     line-height: 1.2;
+} */
+
+.order-section {
+    max-width: 320px;
+    padding: 72px 0;
+    background-color: #2e2f42;
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+                rgba(46, 47, 66, 0.7)),
+            url(../images/order/bg-section-mobile.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin: 0 auto;
 }
 
+@media (min-resolution: 192dpi) {
+    .order-section {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+                rgba(46, 47, 66, 0.7)),
+                url(../images/order/bg-section-mobile@2x.jpg);
+    }
+}
+
+.page-title {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    color: #ffffff;
+    max-width: 160px;
+    margin: 0 auto 72px auto;
+    text-align: center;
+}
+
+.button {
+    font-family: "Roboto", sans-serif;
+    color: #ffffff;
+    background-color: #4d5ae5;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    line-height: 1.5;
+    padding: 16px 32px;
+    border: 0;
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px 0px #00000026;
+    min-width: 169px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 /* ================ /ORDER STYLES ===================== */
 
 /* ================ ADVANTAGES STYLES ================ */
 
-.advantages-icon-wrap {
+/* .advantages-icon-wrap {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -270,13 +335,39 @@ fieldset {
 
 .advantages-title {
     margin-bottom: 8px;
+} */
+
+.advantages-list {
+    display: flex;
+    flex-direction: column;
+    gap: 72px;
 }
 
+.advantages-icon-wrap {
+    display: none;
+}
+
+.advantages-title {
+    color: #2e2f42;
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    line-height: 1.11;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.advantages-text {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+}
 /* ================ /ADVANTAGES STYLES ================ */
 
 /* ================ TEAM STYLES ======================= */
 
-.team-section {
+/* .team-section {
     background-color: #F4F4FD;
 }
 
@@ -338,13 +429,101 @@ fieldset {
 
 .social-icon {
     fill: #F4F4FD;
+} */
+
+.team-section {
+    background-color: #F4F4FD;
+}
+
+.team-section-container {
+    padding-left: 28px;
+    padding-right: 28px;
+}
+
+.section-title {
+    color: #2e2f42;
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    line-height: 1.11;
+    text-align: center;
+    text-transform: capitalize;
+    margin-bottom: 72px;
+}
+
+.team-list {
+    display: flex;
+    flex-direction: column;
+    gap: 72px;
+}
+
+.team-list-item {
+    background-color: #FFFFFF;
+    width: 100%;
+    border-radius: 0px 0px 4px 4px;
+    box-shadow: 0px 2px 1px 0px #2e2f4214,
+        0px 1px 1px 0px #2e2f4229,
+        0px 1px 6px 0px #2e2f4214;
+}
+
+.team-text-wrapper {
+    text-align: center;
+    padding: 32px 0;
+}
+
+.team-text-text {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    margin-bottom: 8px;
+}
+
+.team-text-title {
+    color: #2e2f42;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    line-height: 1.2;
+    margin-bottom: 8px;
+}
+
+.social-list {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+}
+
+.social-list-item {
+    width: 40px;
+    height: 40px;
+}
+
+.social-list-link {
+    width: 100%;
+    height: 100%;
+    background-color: #4D5AE5;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-list-link:hover,
+.social-list-link:focus {
+    background-color: #404BBF;
+}
+
+.social-icon {
+    fill: #F4F4FD;
 }
 
 /* ================ /TEAM STYLES ======================= */
 
 /* ================ PORTFOLIO STYLES =================== */
 
-.portfolio-title {
+/* .portfolio-title {
     margin-bottom: 72px;
 }
 .portfolio-list {
@@ -399,13 +578,13 @@ fieldset {
 
 .portfolio-text-title {
     margin-bottom: 8px;
-}
+} */
 
 /* ================ /PORTFOLIO STYLES =================== */
 
 /* ================ FOOTER STYLES ======================*/
 
-.footer-page, 
+/* .footer-page, 
 .footer-page .logo-studio {
     color: #f4f4fd
 } 
@@ -508,13 +687,13 @@ max-width: 264px;
 .subscribe-icon {
     fill: #ffffff;
     margin-left: 16px;
-}
+} */
 
 /* ================ /FOOTER STYLES ======================*/
 
 /* =======================FORM ============================= */
 
-.backdrop {
+/* .backdrop {
     position: fixed;
     top: 0;
     left: 0;
@@ -707,6 +886,6 @@ input:checked+label>span {
 .privacy-link {
     color: #4D5AE5;
     text-decoration: underline;
-}
+} */
 
 /* ======================= /FORM ============================= */
