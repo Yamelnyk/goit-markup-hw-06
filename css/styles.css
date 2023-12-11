@@ -48,6 +48,19 @@ input {
     font-family: inherit;
 }
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
 .container {
     max-width: 320px;
     padding-left: 16px;
@@ -405,6 +418,187 @@ input:checked+label>span {
 
 /* ============== /MOBILE MODAL STYLES ============== */
 
+/* ============== MOBILE ORDER STYLES ============== */
+
+.order-section {
+    max-width: 320px;
+    padding: 72px 0;
+    background-color: #2e2f42;
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+            rgba(46, 47, 66, 0.7)),
+        url(../images/order/bg-section-mobile.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-device-pixel-ratio: 2),
+(min-resolution: 192dpi),
+(min-resolution: 2dppx) {
+    .order-section {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+                rgba(46, 47, 66, 0.7)),
+            url(../images/order/bg-section-mobile@2x.jpg);
+    }
+}
+
+.page-title {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    color: #ffffff;
+    max-width: 160px;
+    margin: 0 auto 72px auto;
+    text-align: center;
+}
+
+.button {
+    font-family: "Roboto", sans-serif;
+    color: #ffffff;
+    background-color: #4d5ae5;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    line-height: 1.5;
+    padding: 16px 32px;
+    border: 0;
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px 0px #00000026;
+    min-width: 169px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ============== /MOBILE ORDER STYLES ============== */
+
+/* ============== MOBILE ADVANTAGES STYLES ============== */
+.section {
+    padding-top: 96px;
+    padding-bottom: 96px;
+}
+
+.advantages-list {
+    display: flex;
+    flex-direction: column;
+    gap: 72px;
+}
+
+.advantages-icon-wrap {
+    display: none;
+}
+
+.advantages-title {
+    color: #2e2f42;
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    line-height: 1.11;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.advantages-text {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+}
+
+
+/* ============== /MOBILE ADVANTAGES STYLES ============== */
+
+/* ============== MOBILE TEAM STYLES ============== */
+
+.team-section {
+    background-color: #F4F4FD;
+}
+
+.team-section-container {
+    width: 296px;
+}
+
+.section-title {
+    color: #2e2f42;
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    line-height: 1.11;
+    text-align: center;
+    text-transform: capitalize;
+    margin-bottom: 72px;
+}
+
+.team-list {
+    display: flex;
+    flex-direction: column;
+    gap: 72px;
+}
+
+.team-list-item {
+    background-color: #FFFFFF;
+    width: 100%;
+    border-radius: 0px 0px 4px 4px;
+    box-shadow: 0px 2px 1px 0px #2e2f4214,
+        0px 1px 1px 0px #2e2f4229,
+        0px 1px 6px 0px #2e2f4214;
+}
+
+.team-text-wrapper {
+    text-align: center;
+    padding: 32px 0;
+}
+
+.team-text-text {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    margin-bottom: 8px;
+}
+
+.team-text-title {
+    color: #2e2f42;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    line-height: 1.2;
+    margin-bottom: 8px;
+}
+
+.social-list {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+}
+
+.social-list-item {
+    width: 40px;
+    height: 40px;
+}
+
+.social-list-link {
+    width: 100%;
+    height: 100%;
+    background-color: #4D5AE5;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-icon {
+    fill: #F4F4FD;
+}
+
+
+
+/* ============== /MOBILE TEAM STYLES ============== */
+
 @media screen and (min-width: 768px) {
     .container {
         max-width: 768px;
@@ -414,6 +608,7 @@ input:checked+label>span {
         display: none;
     }
 /* ============== TABLET HEADER STYLES ============== */
+
     .mobile-menu-open-btn {
         display: none;
     }
@@ -482,6 +677,8 @@ input:checked+label>span {
     }
 /* ============== /TABLET HEADER STYLES ============== */
 
+/* ============== TABLET MODAL STYLES ============== */
+
     .container-form {
         width: 408px;
         min-height: 584px;
@@ -490,6 +687,79 @@ input:checked+label>span {
     .container-form-title {
         width: 360px;
     }
+
+/* ==============/TABLET MODAL STYLES==============*/
+
+
+/* ============== TABLET ORDER STYLES ============== */
+
+    .order-section {
+        max-width: 768px;
+        padding-top: 112px;
+        padding-bottom: 112px;
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)),
+        url(../images/order/bg-section-tablet.jpg);
+    }
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        .order-section {
+            background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+            rgba(46, 47, 66, 0.7)),
+            url(../images/order/bg-section-tablet@2x.jpg);
+            }
+    }
+
+   .page-title {
+       font-size: 56px;
+       line-height: 1.07;
+       max-width: 496px;
+       margin-bottom: 36px;
+   }
+
+/* ============== /TABLET ORDER STYLES ============== */
+
+/* ============== TABLET ADVANTAGES STYLES ============== */
+
+.advantages-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 72px;
+}
+
+.advantages-item {
+    width: calc((100% - 24px) / 2);
+}
+
+.advantages-title {
+    text-align: start;
+}
+ 
+/* ============== /TABLET ADVANTAGES STYLES ============== */
+
+/* ============== TABLET TEAM STYLES ============== */
+
+.team-section-container {
+    width: 584px;
+}
+
+.team-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 64px;
+}
+
+.team-list-item {
+    width: calc((100% - 24px) / 2);
+}
+
+
+/* ============== /TABLET TEAM STYLES ============== */
+
 } 
 
 
@@ -576,128 +846,112 @@ input:checked+label>span {
     .button {
         transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
+
+    .button:hover,
+    .button:focus {
+         background-color: #404bbf;
+    }
     
 /* ============== /DESKTOP MODAL STYLES ============== */
+
+/* ============== DESKTOP ORDER STYLES ============== */
+
+.order-section {
+    max-width: 1440px;
+    padding-top: 188px;
+    padding-bottom: 188px;
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+            rgba(46, 47, 66, 0.7)),
+        url(../images/order/bg-section-desctop.jpg);
 }
 
+@media (min-device-pixel-ratio: 2),
+(min-resolution: 192dpi),
+(min-resolution: 2dppx) {
+    .order-section {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+                rgba(46, 47, 66, 0.7)),
+            url(../images/order/bg-section-desctop@2x.jpg);
+    }
+}
 
+.page-title {
+    margin-bottom: 48px;
+}
 
+/* ============== /DESKTOP ORDER STYLES ============== */
 
-
-
-
-
-
-
-
-
+/* ============== DESKTOP ADVANTAGES STYLES ============== */
 
 .section {
-    padding-top: 96px;
-    padding-bottom: 96px;
-}
-/* 
-
-.logo {
-    font-family: "Raleway", sans-serif;
-    text-transform: uppercase;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 1.17;
-    letter-spacing: 0.03em;
-    color: #4d5ae5;
-} */
-
-.visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    white-space: nowrap;
-    clip-path: inset(100%);
-    clip: rect(0 0 0 0);
-    overflow: hidden;
+    padding-top: 120px;
+    padding-bottom: 120px;
 }
 
-/* ============== /COMMON STYLES ============== */
-
-/* ============== HEADER STYLES ==============*/
-
- /* .page-header {
-    border-bottom: 1px solid #E7E9FC;
-    box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08), 
-    0px 1px 1px 0px rgba(46, 47, 66, 0.16), 
-    0px 2px 1px 0px rgba(46, 47, 66, 0.08);
- }
-
- .header-container {
+.advantages-icon-wrap {
     display: flex;
     align-items: center;
- } 
-
- .nav {
-    display: flex;
-    align-items: center;
-    margin-right: auto;
- }
-
- .nav-list, 
- .address-list {
-    display: flex;
-    gap: 40px;   
- }
-
-.header-logo {
-    margin-right: 76px;
+    justify-content: center;
+    height: 112px;
+    background-color: #F4F4FD;
+    border: 1px solid #8E8F99;
+    border-radius: 4px;
+    margin-bottom: 8px;
 }
 
-.logo-studio {
-   color: #2e2f42;
+.advantages-item {
+    width: calc((100% - 72px) / 4);
 }
 
-.nav-link, 
-.address-link {
-    display: block;
-    padding: 24px 0;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.nav-link {
+.advantages-title {
+    font-size: 20px;
     font-weight: 500;
-    line-height: 1.5;
+    line-height: 1.2;
 }
 
-.address-link {
-    font-style: normal;
-    line-height: 1.5;
-    color: #434455;
+.advantages-text {
+    font-weight: 400;
 }
 
-.nav-link:hover, 
-.nav-link:focus, 
-.address-link:hover, 
-.address-link:focus {
-    color: #404bbf;
+/* ============== /DESKTOP ADVANTAGES STYLES ============== */
+
+/* ============== DESKTOP TEAM STYLES ============== */
+
+.team-section-container {
+   width: 1158px; 
 }
 
-.current {
-    position: relative;
-    color: #404BBF;
+.team-list-item {
+    width: calc((100% - 72px) / 4);
 }
 
-.current::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -1px;
-    display: block;
-    width: 100%;
-    height: 4px;
-    border-radius: 2px;
+.social-list-link {
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-list-link:hover,
+.social-list-link:focus {
     background-color: #404BBF;
-} */
+}
+
+/* ============== DESKTOP TEAM STYLES ============== */
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ============== /HEADER STYLES ============== */
 
@@ -763,56 +1017,7 @@ input:checked+label>span {
     line-height: 1.2;
 } */
 
-.order-section {
-    max-width: 320px;
-    padding: 72px 0;
-    background-color: #2e2f42;
-    background-image: linear-gradient(rgba(46, 47, 66, 0.7),
-                rgba(46, 47, 66, 0.7)),
-            url(../images/order/bg-section-mobile.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    margin: 0 auto;
-}
 
-@media (min-resolution: 192dpi) {
-    .order-section {
-        background-image: linear-gradient(rgba(46, 47, 66, 0.7),
-                rgba(46, 47, 66, 0.7)),
-                url(../images/order/bg-section-mobile@2x.jpg);
-    }
-}
-
-.page-title {
-    font-size: 36px;
-    font-weight: 700;
-    line-height: 1.11;
-    letter-spacing: 0.02em;
-    text-transform: capitalize;
-    color: #ffffff;
-    max-width: 160px;
-    margin: 0 auto 72px auto;
-    text-align: center;
-}
-
-.button {
-    font-family: "Roboto", sans-serif;
-    color: #ffffff;
-    background-color: #4d5ae5;
-    font-weight: 500;
-    letter-spacing: 0.04em;
-    line-height: 1.5;
-    padding: 16px 32px;
-    border: 0;
-    border-radius: 4px;
-    box-shadow: 0px 4px 4px 0px #00000026;
-    min-width: 169px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 /* ================ /ORDER STYLES ===================== */
 
 /* ================ ADVANTAGES STYLES ================ */
@@ -855,32 +1060,7 @@ input:checked+label>span {
     margin-bottom: 8px;
 } */
 
-.advantages-list {
-    display: flex;
-    flex-direction: column;
-    gap: 72px;
-}
 
-.advantages-icon-wrap {
-    display: none;
-}
-
-.advantages-title {
-    color: #2e2f42;
-    font-size: 36px;
-    font-weight: 700;
-    letter-spacing: 0.02em;
-    line-height: 1.11;
-    text-align: center;
-    margin-bottom: 8px;
-}
-
-.advantages-text {
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-}
 /* ================ /ADVANTAGES STYLES ================ */
 
 /* ================ TEAM STYLES ======================= */
@@ -949,93 +1129,14 @@ input:checked+label>span {
     fill: #F4F4FD;
 } */
 
-.team-section {
-    background-color: #F4F4FD;
-}
 
-.team-section-container {
-    padding-left: 28px;
-    padding-right: 28px;
-}
 
-.section-title {
-    color: #2e2f42;
-    font-size: 36px;
-    font-weight: 700;
-    letter-spacing: 0.02em;
-    line-height: 1.11;
-    text-align: center;
-    text-transform: capitalize;
-    margin-bottom: 72px;
-}
 
-.team-list {
-    display: flex;
-    flex-direction: column;
-    gap: 72px;
-}
 
-.team-list-item {
-    background-color: #FFFFFF;
-    width: 100%;
-    border-radius: 0px 0px 4px 4px;
-    box-shadow: 0px 2px 1px 0px #2e2f4214,
-        0px 1px 1px 0px #2e2f4229,
-        0px 1px 6px 0px #2e2f4214;
-}
 
-.team-text-wrapper {
-    text-align: center;
-    padding: 32px 0;
-}
 
-.team-text-text {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    margin-bottom: 8px;
-}
 
-.team-text-title {
-    color: #2e2f42;
-    font-size: 20px;
-    font-weight: 500;
-    letter-spacing: 0.02em;
-    line-height: 1.2;
-    margin-bottom: 8px;
-}
 
-/* .social-list {
-    display: flex;
-    gap: 24px;
-    justify-content: center;
-} */
-
-.social-list-item {
-    width: 40px;
-    height: 40px;
-}
-
-.social-list-link {
-    width: 100%;
-    height: 100%;
-    background-color: #4D5AE5;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.social-list-link:hover,
-.social-list-link:focus {
-    background-color: #404BBF;
-}
-
-.social-icon {
-    fill: #F4F4FD;
-}
 
 /* ================ /TEAM STYLES ======================= */
 
