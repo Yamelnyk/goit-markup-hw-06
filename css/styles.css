@@ -393,7 +393,7 @@ input {
 
 input:checked+label>span {
     background-color: #404BBF;
-    border: #404BBF;
+    border: none;
     fill: #F4F4FD;
 }
 input:focus+label>span {
