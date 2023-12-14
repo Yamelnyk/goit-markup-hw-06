@@ -377,6 +377,7 @@ input {
 }
 
 .checkbox-span {
+    flex-shrink: 0;
     width: 16px;
     height: 16px;
     border: 1px solid #2e2f4266;
@@ -392,8 +393,11 @@ input {
 
 input:checked+label>span {
     background-color: #404BBF;
-    border: none;
+    border: #404BBF;
     fill: #F4F4FD;
+}
+input:focus+label>span {
+    outline: 1px solid #0000ff80;
 }
 
 .privacy-link {
